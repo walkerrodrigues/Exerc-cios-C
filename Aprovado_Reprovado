@@ -1,0 +1,29 @@
+//Exercício 3 - Crie um programa para ler 3 notas e mostrar a média delas.
+
+#include <stdio.h>
+
+void main () {
+    
+    float nota1, nota2, nota3, media;
+    
+    printf ("Digite a Primeira Nota: ");
+      scanf ("%f", &nota1);
+    
+    printf ("Digite a Segunda Nota: ");
+      scanf ("%f", &nota2);
+    
+    printf ("Digite a Terceira Nota: ");
+      scanf ("%f", &nota3);
+    
+    media = (nota1 + nota2 + nota3) / 3;
+    
+    printf ("Este aluno obteve a média de %.2f\n", media);
+    
+        if (media >= 7.0) {
+            printf ("Parabéns, este aluno passou!");
+            }
+    
+        if (media < 7.0) {
+            printf ("Infelizmente o aluno foi reprovado.");
+            }
+}
