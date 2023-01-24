@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+
+void main () {
+
+	setlocale (LC_ALL, "Portuguese");
+	float salario_minimo, salario_atual, quantos_salarios; 
+    fflush (stdin);
+
+	printf ("Valor do Salário Mínimo: ");
+	scanf ("%f", &salario_minimo);
+    fflush (stdin);
+
+	printf ("Salário do Funcionário: ");
+	scanf ("%f", &salario_atual);
+    fflush (stdin);
+    
+	quantos_salarios = salario_atual / salario_minimo;
+
+	printf ("Este funcionário recebe %.2f salários mínimos", quantos_salarios);
+
+}
