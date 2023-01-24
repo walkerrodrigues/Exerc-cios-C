@@ -1,0 +1,21 @@
+/* Exercício 2 - Crie um programa que leia um valor de hora e 
+informe quantos minutos se passaram desde o início do dia.*/
+
+#include <stdio.h>
+#include <locale.h>
+
+void main () {
+    
+    setlocale (LC_ALL, "Portuguese");
+    int horas, minutos, segundos;
+    
+    printf ("Informe a hora do dia (formato 24h): ");
+    scanf ("%d", &horas);
+    
+    minutos = (horas * 60);
+    segundos = (minutos * 60);
+    
+    printf ("Desde o início do dia (0h), passou-se %d minutos.\n", minutos);
+    printf ("Desde o início do dia (0h), passou-se %d segundos", segundos);
+    
+} 
