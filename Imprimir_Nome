@@ -1,0 +1,17 @@
+/* Exercício 5 - Faça um programa em C que receba(leia) 
+o nome de um usuário e imprima na tela.*/
+
+#include <stdio.h>
+#include <locale.h>
+
+void main () {
+    
+    setlocale (LC_ALL, "Portuguese");
+    char nome [30];
+    
+    printf ("Digite seu nome: ");
+    gets (nome);
+    
+    printf ("Muito prazer, %s", nome);
+    
+}
