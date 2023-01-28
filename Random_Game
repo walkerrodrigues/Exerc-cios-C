@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main () {
+
+int n, m;
+srand(time(NULL));
+printf ("Vou pensar num número entre 1 a 5, se você acertar você ganha.\n");
+n = rand () % 5 + 1;
+printf ("Digite seu palpite: ");
+scanf ("%i", &m);
+if (m == n) {
+printf ("Escolhi %i e você escolheu %i. Parabéns, você acertou!", n, m);
+}
+else {
+printf ("Escolhi %i e você escolheu %i. Você errou!", n ,m);
+}
+}
