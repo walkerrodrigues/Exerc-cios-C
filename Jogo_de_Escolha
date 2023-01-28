@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+
+void main () {
+    
+    int escolha, dano;
+    int pontos_de_vida = 5;
+    
+    printf ("Escolha uma das portas:\n");
+    printf ("1. Porta Vermelha\n");
+    printf ("2. Porta Branca\n\n");
+   
+    printf("Digite sua Escolha: \n");
+    scanf ("%i", &escolha);
+
+    if (escolha == 1) {
+        
+        srand (time(NULL));
+        dano = rand ()% 5 + 1; 
+        printf ("A porta abre e logo seu corpo é jogado violentamente\npara trás por causa de uma grande explosão!\n");
+        printf ("\nVocê recebe: %i pontos de dano.\n", dano);
+        pontos_de_vida -= dano;
+        
+        if (pontos_de_vida <= 0) {
+            printf ("Você está morto e sua alma desapareceu no vácuo!");
+        }
+        else {
+            printf ("Você ainda possui %i pontos de vida.", pontos_de_vida);
+        }
+        
+    }
+    
+    if (escolha == 2) {
+        printf ("Esta porta range e logo uma fria brisa começa a adentrar nesse cubículo. Está escuro.");
+    }
+}
